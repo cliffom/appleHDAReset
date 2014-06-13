@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36A9D584194BB96E002AC76E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D583194BB96E002AC76E /* Cocoa.framework */; };
+		36A9D58E194BB96E002AC76E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D58C194BB96E002AC76E /* InfoPlist.strings */; };
+		36A9D590194BB96E002AC76E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D58F194BB96E002AC76E /* main.m */; };
+		36A9D594194BB96E002AC76E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D592194BB96E002AC76E /* Credits.rtf */; };
+		36A9D597194BB96E002AC76E /* SPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D596194BB96E002AC76E /* SPAppDelegate.m */; };
+		36A9D59A194BB96E002AC76E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D598194BB96E002AC76E /* MainMenu.xib */; };
+		36A9D59C194BB96E002AC76E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D59B194BB96E002AC76E /* Images.xcassets */; };
+		36A9D5A3194BB96E002AC76E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D5A2194BB96E002AC76E /* XCTest.framework */; };
+		36A9D5A4194BB96E002AC76E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D583194BB96E002AC76E /* Cocoa.framework */; };
+		36A9D5AC194BB96E002AC76E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5AA194BB96E002AC76E /* InfoPlist.strings */; };
+		36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D5AD194BB96E002AC76E /* audioresetTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36A9D5A5194BB96E002AC76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36A9D578194BB96E002AC76E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36A9D57F194BB96E002AC76E;
+			remoteInfo = audioreset;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36A9D580194BB96E002AC76E /* audioreset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioreset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A9D583194BB96E002AC76E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		36A9D586194BB96E002AC76E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		36A9D587194BB96E002AC76E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		36A9D588194BB96E002AC76E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		36A9D58B194BB96E002AC76E /* audioreset-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "audioreset-Info.plist"; sourceTree = "<group>"; };
+		36A9D58D194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		36A9D58F194BB96E002AC76E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36A9D591194BB96E002AC76E /* audioreset-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "audioreset-Prefix.pch"; sourceTree = "<group>"; };
+		36A9D593194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		36A9D595194BB96E002AC76E /* SPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAppDelegate.h; sourceTree = "<group>"; };
+		36A9D596194BB96E002AC76E /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
+		36A9D599194BB96E002AC76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		36A9D59B194BB96E002AC76E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = audioresetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A9D5A2194BB96E002AC76E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		36A9D5A9194BB96E002AC76E /* audioresetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "audioresetTests-Info.plist"; sourceTree = "<group>"; };
+		36A9D5AB194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36A9D57D194BB96E002AC76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D584194BB96E002AC76E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36A9D59E194BB96E002AC76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D5A4194BB96E002AC76E /* Cocoa.framework in Frameworks */,
+				36A9D5A3194BB96E002AC76E /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36A9D577194BB96E002AC76E = {
+			isa = PBXGroup;
+			children = (
+				36A9D589194BB96E002AC76E /* audioreset */,
+				36A9D5A7194BB96E002AC76E /* audioresetTests */,
+				36A9D582194BB96E002AC76E /* Frameworks */,
+				36A9D581194BB96E002AC76E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36A9D581194BB96E002AC76E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D580194BB96E002AC76E /* audioreset.app */,
+				36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36A9D582194BB96E002AC76E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D583194BB96E002AC76E /* Cocoa.framework */,
+				36A9D5A2194BB96E002AC76E /* XCTest.framework */,
+				36A9D585194BB96E002AC76E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36A9D585194BB96E002AC76E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D586194BB96E002AC76E /* AppKit.framework */,
+				36A9D587194BB96E002AC76E /* CoreData.framework */,
+				36A9D588194BB96E002AC76E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		36A9D589194BB96E002AC76E /* audioreset */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D595194BB96E002AC76E /* SPAppDelegate.h */,
+				36A9D596194BB96E002AC76E /* SPAppDelegate.m */,
+				36A9D598194BB96E002AC76E /* MainMenu.xib */,
+				36A9D59B194BB96E002AC76E /* Images.xcassets */,
+				36A9D58A194BB96E002AC76E /* Supporting Files */,
+			);
+			path = audioreset;
+			sourceTree = "<group>";
+		};
+		36A9D58A194BB96E002AC76E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D58B194BB96E002AC76E /* audioreset-Info.plist */,
+				36A9D58C194BB96E002AC76E /* InfoPlist.strings */,
+				36A9D58F194BB96E002AC76E /* main.m */,
+				36A9D591194BB96E002AC76E /* audioreset-Prefix.pch */,
+				36A9D592194BB96E002AC76E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36A9D5A7194BB96E002AC76E /* audioresetTests */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D5AD194BB96E002AC76E /* audioresetTests.m */,
+				36A9D5A8194BB96E002AC76E /* Supporting Files */,
+			);
+			path = audioresetTests;
+			sourceTree = "<group>";
+		};
+		36A9D5A8194BB96E002AC76E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36A9D5A9194BB96E002AC76E /* audioresetTests-Info.plist */,
+				36A9D5AA194BB96E002AC76E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36A9D57F194BB96E002AC76E /* audioreset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioreset" */;
+			buildPhases = (
+				36A9D57C194BB96E002AC76E /* Sources */,
+				36A9D57D194BB96E002AC76E /* Frameworks */,
+				36A9D57E194BB96E002AC76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = audioreset;
+			productName = audioreset;
+			productReference = 36A9D580194BB96E002AC76E /* audioreset.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36A9D5A0194BB96E002AC76E /* audioresetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioresetTests" */;
+			buildPhases = (
+				36A9D59D194BB96E002AC76E /* Sources */,
+				36A9D59E194BB96E002AC76E /* Frameworks */,
+				36A9D59F194BB96E002AC76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36A9D5A6194BB96E002AC76E /* PBXTargetDependency */,
+			);
+			name = audioresetTests;
+			productName = audioresetTests;
+			productReference = 36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36A9D578194BB96E002AC76E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Suite Potato";
+				TargetAttributes = {
+					36A9D5A0194BB96E002AC76E = {
+						TestTargetID = 36A9D57F194BB96E002AC76E;
+					};
+				};
+			};
+			buildConfigurationList = 36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "audioreset" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36A9D577194BB96E002AC76E;
+			productRefGroup = 36A9D581194BB96E002AC76E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36A9D57F194BB96E002AC76E /* audioreset */,
+				36A9D5A0194BB96E002AC76E /* audioresetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36A9D57E194BB96E002AC76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D58E194BB96E002AC76E /* InfoPlist.strings in Resources */,
+				36A9D59C194BB96E002AC76E /* Images.xcassets in Resources */,
+				36A9D594194BB96E002AC76E /* Credits.rtf in Resources */,
+				36A9D59A194BB96E002AC76E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36A9D59F194BB96E002AC76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D5AC194BB96E002AC76E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36A9D57C194BB96E002AC76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D590194BB96E002AC76E /* main.m in Sources */,
+				36A9D597194BB96E002AC76E /* SPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36A9D59D194BB96E002AC76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36A9D5A6194BB96E002AC76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36A9D57F194BB96E002AC76E /* audioreset */;
+			targetProxy = 36A9D5A5194BB96E002AC76E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36A9D58C194BB96E002AC76E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A9D58D194BB96E002AC76E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		36A9D592194BB96E002AC76E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A9D593194BB96E002AC76E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		36A9D598194BB96E002AC76E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A9D599194BB96E002AC76E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		36A9D5AA194BB96E002AC76E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A9D5AB194BB96E002AC76E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36A9D5AF194BB96E002AC76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		36A9D5B0194BB96E002AC76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		36A9D5B2194BB96E002AC76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
+				INFOPLIST_FILE = "audioreset/audioreset-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		36A9D5B3194BB96E002AC76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
+				INFOPLIST_FILE = "audioreset/audioreset-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		36A9D5B5194BB96E002AC76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/audioreset.app/Contents/MacOS/audioreset";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "audioresetTests/audioresetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		36A9D5B6194BB96E002AC76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/audioreset.app/Contents/MacOS/audioreset";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
+				INFOPLIST_FILE = "audioresetTests/audioresetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "audioreset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A9D5AF194BB96E002AC76E /* Debug */,
+				36A9D5B0194BB96E002AC76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioreset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A9D5B2194BB96E002AC76E /* Debug */,
+				36A9D5B3194BB96E002AC76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioresetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A9D5B5194BB96E002AC76E /* Debug */,
+				36A9D5B6194BB96E002AC76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36A9D578194BB96E002AC76E /* Project object */;
+}
