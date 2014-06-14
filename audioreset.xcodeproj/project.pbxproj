@@ -169,6 +169,7 @@
 			buildPhases = (
 				36A9D57C194BB96E002AC76E /* Sources */,
 				36A9D57D194BB96E002AC76E /* Frameworks */,
+				8ECF2C08194C128800BE71F4 /* ShellScript */,
 				36A9D57E194BB96E002AC76E /* Resources */,
 			);
 			buildRules = (
@@ -255,6 +256,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8ECF2C08194C128800BE71F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "chmod +x audioreset/resetHDA.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36A9D57C194BB96E002AC76E /* Sources */ = {
