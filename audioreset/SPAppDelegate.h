@@ -10,6 +10,15 @@
 
 @interface SPAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong, nonatomic) NSStatusItem *statusItem;
+@property (weak) IBOutlet NSMenu *audioResetMenu;
+@property (weak) IBOutlet NSMenuItem *resetAppleHDA;
+
+- (IBAction)resetAppleHDAAction:(id)sender;
+- (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
+                     withArguments:(NSArray *)arguments
+                            output:(NSString **)output
+                  errorDescription:(NSString **)errorDescription;
+
 
 @end
