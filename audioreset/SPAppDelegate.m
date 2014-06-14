@@ -22,7 +22,8 @@
 - (IBAction)resetAppleHDAAction:(id)sender {
     NSString *output = nil;
     NSString *processErrorDescription = nil;
-    BOOL success = [self runProcessAsAdministrator:@"~/resetHDA.sh"
+    NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
+    BOOL success = [self runProcessAsAdministrator:resetScript
                                      withArguments:[NSArray arrayWithObjects:nil]
                                             output:&output
                                   errorDescription:&processErrorDescription];

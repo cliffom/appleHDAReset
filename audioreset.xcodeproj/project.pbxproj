@@ -19,6 +19,7 @@
 		36A9D5AC194BB96E002AC76E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5AA194BB96E002AC76E /* InfoPlist.strings */; };
 		36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D5AD194BB96E002AC76E /* audioresetTests.m */; };
 		36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */; };
+		36B5E5EE194BEE73003D881D /* resetHDA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 36B5E5ED194BEDC0003D881D /* resetHDA.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		36A9D5AB194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
 		36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Layer_16-01-16.png"; sourceTree = "<group>"; };
+		36B5E5ED194BEDC0003D881D /* resetHDA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = resetHDA.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				36A9D58F194BB96E002AC76E /* main.m */,
 				36A9D591194BB96E002AC76E /* audioreset-Prefix.pch */,
 				36A9D592194BB96E002AC76E /* Credits.rtf */,
+				36B5E5ED194BEDC0003D881D /* resetHDA.sh */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B5E5EE194BEE73003D881D /* resetHDA.sh in Resources */,
 				36A9D58E194BB96E002AC76E /* InfoPlist.strings in Resources */,
 				36A9D59C194BB96E002AC76E /* Images.xcassets in Resources */,
 				36A9D594194BB96E002AC76E /* Credits.rtf in Resources */,
@@ -471,6 +475,7 @@
 				36A9D5B3194BB96E002AC76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioresetTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +484,7 @@
 				36A9D5B6194BB96E002AC76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
