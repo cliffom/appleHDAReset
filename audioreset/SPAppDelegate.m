@@ -37,6 +37,10 @@
     }
 }
 
+//
+// Credit to the stackoverflow thread at
+// http://stackoverflow.com/questions/6841937/authorizationexecutewithprivileges-is-deprecated
+//
 - (BOOL) runProcessAsAdministrator:(NSString*)scriptPath
                      withArguments:(NSArray *)arguments
                             output:(NSString **)output
