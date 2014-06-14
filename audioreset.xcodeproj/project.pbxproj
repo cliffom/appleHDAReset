@@ -18,6 +18,7 @@
 		36A9D5A4194BB96E002AC76E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D583194BB96E002AC76E /* Cocoa.framework */; };
 		36A9D5AC194BB96E002AC76E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5AA194BB96E002AC76E /* InfoPlist.strings */; };
 		36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D5AD194BB96E002AC76E /* audioresetTests.m */; };
+		36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		36A9D5A9194BB96E002AC76E /* audioresetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "audioresetTests-Info.plist"; sourceTree = "<group>"; };
 		36A9D5AB194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
+		36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Layer_16-01-16.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		36A9D58A194BB96E002AC76E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */,
 				36A9D58B194BB96E002AC76E /* audioreset-Info.plist */,
 				36A9D58C194BB96E002AC76E /* InfoPlist.strings */,
 				36A9D58F194BB96E002AC76E /* main.m */,
@@ -235,6 +238,7 @@
 				36A9D59C194BB96E002AC76E /* Images.xcassets in Resources */,
 				36A9D594194BB96E002AC76E /* Credits.rtf in Resources */,
 				36A9D59A194BB96E002AC76E /* MainMenu.xib in Resources */,
+				36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

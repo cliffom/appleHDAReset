@@ -13,9 +13,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    self.statusItem.title = @"Audio Reset";
+    self.statusItem.title = @"";
     self.statusItem.highlightMode = YES;
-    [_statusItem setMenu:self.audioResetMenu];
+    self.statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
+    [self.statusItem setMenu:self.audioResetMenu];
 }
 
 - (IBAction)resetAppleHDAAction:(id)sender {
@@ -27,10 +28,11 @@
                                   errorDescription:&processErrorDescription];
 
     if (!success) {
-
+        NSLog(@"There was an issue:");
+        NSLog(processErrorDescription);
     }
     else {
-
+        NSLog(@"Success!");
     }
 }
 
