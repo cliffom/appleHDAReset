@@ -30,7 +30,7 @@
 
     if (!success) {
         NSLog(@"There was an issue:");
-        NSLog(processErrorDescription);
+        NSLog( @"%@", processErrorDescription );
     }
     else {
         NSLog(@"Success!");
