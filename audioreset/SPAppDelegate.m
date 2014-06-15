@@ -20,6 +20,10 @@
 }
 
 - (IBAction)resetAppleHDAAction:(id)sender {
+    [self performSelectorInBackground:@selector(resetAppleHDAInBackground) withObject:nil];
+}
+
+- (void)resetAppleHDAInBackground {
     NSString *output = nil;
     NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
@@ -27,7 +31,7 @@
                                      withArguments:[NSArray arrayWithObjects:nil]
                                             output:&output
                                   errorDescription:&processErrorDescription];
-
+    
     if (!success) {
         NSLog(@"There was an issue:");
         NSLog( @"%@", processErrorDescription );
@@ -41,7 +45,7 @@
 // Credit to the stackoverflow thread at
 // http://stackoverflow.com/questions/6841937/authorizationexecutewithprivileges-is-deprecated
 //
-- (BOOL) runProcessAsAdministrator:(NSString*)scriptPath
+- (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
                      withArguments:(NSArray *)arguments
                             output:(NSString **)output
                   errorDescription:(NSString **)errorDescription {

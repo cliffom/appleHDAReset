@@ -15,6 +15,7 @@
 @property (weak) IBOutlet NSMenuItem *resetAppleHDA;
 
 - (IBAction)resetAppleHDAAction:(id)sender;
+- (void)resetAppleHDAInBackground;
 - (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
                      withArguments:(NSArray *)arguments
                             output:(NSString **)output
