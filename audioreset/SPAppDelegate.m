@@ -21,7 +21,9 @@
 
 - (void)receiveWakeNote: (NSNotification*) note
 {
-    NSLog(@"Machine woke up");
+    if (_runOnWake.isEnabled) {
+        NSLog(@"Machine woke up");
+    }
 }
 
 - (IBAction)openAboutWindow:(id)sender {
@@ -118,4 +120,10 @@
         return YES;
     }
 }
+
+- (NSString *) bundleVersionNumber {
+	return [[[NSBundle mainBundle] infoDictionary]
+            objectForKey:@"CFBundleVersion"];
+}
+
 @end

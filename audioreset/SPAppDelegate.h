@@ -15,6 +15,7 @@
 @property (weak) IBOutlet NSMenuItem *resetAppleHDA;
 @property (unsafe_unretained) IBOutlet NSWindow *aboutWindow;
 @property (unsafe_unretained) IBOutlet NSWindow *preferencesWindow;
+@property (weak) IBOutlet NSButton *runOnWake;
 @property (weak) IBOutlet NSSecureTextField *passwordField;
 
 - (IBAction)openAboutWindow:(id)sender;
@@ -28,5 +29,6 @@
                  errorDescription:(NSString **)errorDescription;
 - (void)openWindow:(NSWindow *)window
             sender:(id)sender;
+- (NSString *)bundleVersionNumber;
 
 @end

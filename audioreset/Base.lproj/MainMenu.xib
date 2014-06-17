@@ -18,6 +18,7 @@
                 <outlet property="passwordField" destination="h3e-VY-2iT" id="7QE-FI-wpb"/>
                 <outlet property="preferencesWindow" destination="xdV-GJ-9GQ" id="JVB-wI-GCA"/>
                 <outlet property="resetAppleHDA" destination="s2l-ta-hYj" id="VA6-0W-7sW"/>
+                <outlet property="runOnWake" destination="4Qw-NN-cwb" id="mQI-nq-uA1"/>
             </connections>
         </customObject>
         <menu id="fTu-lS-qti">
@@ -85,11 +86,18 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-1A-eLj">
                         <rect key="frame" x="423" y="14" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="v1.0.1" id="jcN-Zg-mhv">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="vX.Y.Z" id="jcN-Zg-mhv">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <binding destination="AgE-u6-GpR" name="displayPatternValue1" keyPath="selection.bundleVersionNumber" id="AjZ-7B-kmx">
+                                <dictionary key="options">
+                                    <string key="NSDisplayPattern">v%{value1}@</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-Yf-Rbi">
                         <rect key="frame" x="17" y="58" width="56" height="56"/>
@@ -101,14 +109,14 @@
         </window>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="xdV-GJ-9GQ">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="283" y="305" width="411" height="145"/>
+            <rect key="contentRect" x="283" y="305" width="411" height="170"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="5dE-cr-Yvc">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="145"/>
+                <rect key="frame" x="0.0" y="0.0" width="411" height="170"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-VY-2iT">
-                        <rect key="frame" x="92" y="105" width="299" height="22"/>
+                        <rect key="frame" x="92" y="108" width="299" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Your password (optional)" drawsBackground="YES" usesSingleLineMode="YES" id="tOh-8Y-Y7Y">
                             <font key="font" metaFont="system"/>
@@ -127,7 +135,7 @@
                         </connections>
                     </secureTextField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-5R-nTC">
-                        <rect key="frame" x="20" y="108" width="66" height="17"/>
+                        <rect key="frame" x="18" y="111" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="eO8-5n-aA3">
                             <font key="font" metaFont="system"/>
@@ -159,10 +167,30 @@ DQ
                             <action selector="performClose:" target="xdV-GJ-9GQ" id="Izs-bt-cIw"/>
                         </connections>
                     </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-NN-cwb">
+                        <rect key="frame" x="18" y="134" width="252" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Reset AppleHDA on wake from sleep" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6Ag-lX-0fa">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="iFi-KJ-7zi" name="value" keyPath="values.resetAppleHDAOnWakeFromSleep" id="KAL-9d-fFG">
+                                <dictionary key="options">
+                                    <bool key="NSValidatesImmediately" value="YES"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="iFi-KJ-7zi"/>
+        <objectController id="AgE-u6-GpR">
+            <connections>
+                <binding destination="Voe-Tx-rLC" name="contentObject" keyPath="self" id="xNi-1n-DHc"/>
+            </connections>
+        </objectController>
     </objects>
     <resources>
         <image name="Layer_16-01-16" width="10" height="16"/>
