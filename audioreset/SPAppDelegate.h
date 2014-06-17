@@ -31,4 +31,7 @@
             sender:(id)sender;
 - (NSString *)bundleVersionNumber;
 
+- (void)receiveWakeNote: (NSNotification*) note;
+- (void)fileNotifications;
+
 @end

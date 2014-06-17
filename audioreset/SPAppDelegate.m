@@ -10,6 +10,10 @@
 
 @implementation SPAppDelegate
 
+- (void)awakeFromNib {
+    [self fileNotifications];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -17,13 +21,6 @@
     _statusItem.highlightMode = YES;
     _statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
     [_statusItem setMenu:_audioResetMenu];
-}
-
-- (void)receiveWakeNote: (NSNotification*) note
-{
-    if (_runOnWake.isEnabled) {
-        NSLog(@"Machine woke up");
-    }
 }
 
 - (IBAction)openAboutWindow:(id)sender {
@@ -121,9 +118,23 @@
     }
 }
 
-- (NSString *) bundleVersionNumber {
+- (NSString *)bundleVersionNumber {
 	return [[[NSBundle mainBundle] infoDictionary]
             objectForKey:@"CFBundleVersion"];
+}
+
+- (void)receiveWakeNote: (NSNotification*) note
+{
+    if (_runOnWake.state == NSOnState) {
+        [self resetAppleHDAAction:nil];
+    }
+}
+
+- (void)fileNotifications
+{
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
+                                                           selector: @selector(receiveWakeNote:)
+                                                               name: NSWorkspaceDidWakeNotification object: NULL];
 }
 
 @end
