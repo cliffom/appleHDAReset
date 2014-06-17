@@ -17,31 +17,32 @@
                 <outlet property="audioResetMenu" destination="fTu-lS-qti" id="vYv-T4-Adj"/>
                 <outlet property="passwordField" destination="h3e-VY-2iT" id="7QE-FI-wpb"/>
                 <outlet property="preferencesWindow" destination="xdV-GJ-9GQ" id="JVB-wI-GCA"/>
-                <outlet property="resetAppleHDA" destination="s2l-ta-hYj" id="VA6-0W-7sW"/>
                 <outlet property="runOnWake" destination="4Qw-NN-cwb" id="mQI-nq-uA1"/>
             </connections>
         </customObject>
         <menu id="fTu-lS-qti">
             <items>
-                <menuItem title="Reset AppleHDA" keyEquivalent="r" id="s2l-ta-hYj">
+                <menuItem title="Reset AppleHDA" id="s2l-ta-hYj">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="resetAppleHDAInBackground" target="Voe-Tx-rLC" id="Yen-6w-pGX"/>
+                        <action selector="resetAppleHDAInBackground:" target="Voe-Tx-rLC" id="YgQ-VK-jVC"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="iJa-Xh-bIF"/>
-                <menuItem title="Preferences" keyEquivalent="," id="anA-78-KTh">
+                <menuItem title="Preferences" id="anA-78-KTh">
+                    <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openPreferencesWindow:" target="Voe-Tx-rLC" id="nXb-Is-DRZ"/>
                     </connections>
                 </menuItem>
-                <menuItem title="About" keyEquivalent="a" id="ric-3v-LvM">
+                <menuItem title="About" id="ric-3v-LvM">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="ZwQ-tv-nO4"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" keyEquivalent="q" id="wrd-N2-z4I">
+                <menuItem title="Quit" id="wrd-N2-z4I">
+                    <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="terminate:" target="-3" id="Sx3-pL-yPp"/>
                     </connections>

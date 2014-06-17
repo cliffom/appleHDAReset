@@ -15,19 +15,18 @@
 @property (weak)                IBOutlet NSMenu *audioResetMenu;
 @property (weak)                IBOutlet NSSecureTextField *passwordField;
 @property (unsafe_unretained)   IBOutlet NSWindow *preferencesWindow;
-@property (weak)                IBOutlet NSMenuItem *resetAppleHDA;
 @property (weak)                IBOutlet NSButton *runOnWake;
 @property (strong, nonatomic)   NSStatusItem *statusItem;
 
 - (IBAction)openAboutWindow:(id)sender;
 - (IBAction)openPreferencesWindow:(id)sender;
-- (IBAction)resetAppleHDAInBackground;
+- (IBAction)resetAppleHDAInBackground:(id)sender;
 - (IBAction)toggleAddToLoginItems:(id)sender;
 
 - (NSString *)bundleVersionNumber;
 - (void)openWindow:(NSWindow *)window sender:(id)sender;
 - (void)receiveWakeNote: (NSNotification*) note;
-- (void)resetAppleHDAAction:(id)sender;
+- (void)resetAppleHDA;
 - (BOOL)runProcessAsAdministrator:(NSString *)scriptPath
                      userPassword:(NSString *)userPassword
                     withArguments:(NSArray *)arguments

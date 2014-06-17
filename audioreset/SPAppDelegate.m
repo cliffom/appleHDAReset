@@ -44,8 +44,8 @@
     }
 }
 
-- (IBAction)resetAppleHDAInBackground {
-    [self performSelectorInBackground:@selector(resetAppleHDAAction:) withObject:nil];
+- (IBAction)resetAppleHDAInBackground:(id)sender {
+    [self performSelectorInBackground:@selector(resetAppleHDA) withObject:nil];
 }
 
 #pragma mark -
@@ -65,11 +65,11 @@
 - (void)receiveWakeNote: (NSNotification*) note
 {
     if (_runOnWake.state == NSOnState) {
-        [self resetAppleHDAAction:nil];
+        [self resetAppleHDAInBackground:nil];
     }
 }
 
-- (void)resetAppleHDAAction:(id)sender {
+- (void)resetAppleHDA {
     NSString *output = nil;
     NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
