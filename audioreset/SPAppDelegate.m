@@ -25,14 +25,8 @@
     [_statusItem setMenu:_audioResetMenu];
 }
 
-- (IBAction)toggleAddToLoginItems:(id)sender {
-    if ([sender state] == NSOnState) {
-		[[NSBundle mainBundle] addToLoginItems];
-    } else {
-		[[NSBundle mainBundle] removeFromLoginItems];
-    }
-
-}
+#pragma mark -
+#pragma mark IBActions
 
 - (IBAction)openAboutWindow:(id)sender {
     [self openWindow:_aboutWindow sender:sender];
@@ -42,17 +36,40 @@
     [self openWindow:_preferencesWindow sender:sender];
 }
 
+- (IBAction)toggleAddToLoginItems:(id)sender {
+    if ([sender state] == NSOnState) {
+		[[NSBundle mainBundle] addToLoginItems];
+    } else {
+		[[NSBundle mainBundle] removeFromLoginItems];
+    }
+}
+
+- (IBAction)resetAppleHDAInBackground {
+    [self performSelectorInBackground:@selector(resetAppleHDAAction:) withObject:nil];
+}
+
+#pragma mark -
+#pragma mark Methods
+
+- (NSString *)bundleVersionNumber {
+	return [[[NSBundle mainBundle] infoDictionary]
+            objectForKey:@"CFBundleVersion"];
+}
+
 - (void)openWindow:(NSWindow *)window
             sender: (id)sender {
     [NSApp activateIgnoringOtherApps:YES];
 	[window makeKeyAndOrderFront:sender];
 }
 
-- (IBAction)resetAppleHDAAction:(id)sender {
-    [self performSelectorInBackground:@selector(resetAppleHDAInBackground) withObject:nil];
+- (void)receiveWakeNote: (NSNotification*) note
+{
+    if (_runOnWake.state == NSOnState) {
+        [self resetAppleHDAAction:nil];
+    }
 }
 
-- (void)resetAppleHDAInBackground {
+- (void)resetAppleHDAAction:(id)sender {
     NSString *output = nil;
     NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
@@ -61,7 +78,7 @@
                                      withArguments:[NSArray arrayWithObjects:nil]
                                             output:&output
                                   errorDescription:&processErrorDescription];
-    
+
     if (!success) {
         NSLog(@"There was an issue:");
         NSLog( @"%@", processErrorDescription );
@@ -128,17 +145,4 @@
         return YES;
     }
 }
-
-- (NSString *)bundleVersionNumber {
-	return [[[NSBundle mainBundle] infoDictionary]
-            objectForKey:@"CFBundleVersion"];
-}
-
-- (void)receiveWakeNote: (NSNotification*) note
-{
-    if (_runOnWake.state == NSOnState) {
-        [self resetAppleHDAAction:nil];
-    }
-}
-
 @end
