@@ -12,11 +12,27 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    self.statusItem.title = @"";
-    self.statusItem.highlightMode = YES;
-    self.statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
-    [self.statusItem setMenu:self.audioResetMenu];
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    _statusItem.title = @"";
+    _statusItem.highlightMode = YES;
+    _statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
+    [_statusItem setMenu:_audioResetMenu];
+}
+
+- (void)receiveWakeNote: (NSNotification*) note
+{
+    NSLog(@"Machine woke up");
+}
+
+- (IBAction)openAboutWindow:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+	[_aboutWindow makeKeyAndOrderFront:sender];
+}
+
+- (IBAction)openPreferencesWindow:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+	[_preferencesWindow makeKeyAndOrderFront:sender];
+
 }
 
 - (IBAction)resetAppleHDAAction:(id)sender {
@@ -28,6 +44,7 @@
     NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
     BOOL success = [self runProcessAsAdministrator:resetScript
+                                      userPassword:_passwordField.stringValue
                                      withArguments:[NSArray arrayWithObjects:nil]
                                             output:&output
                                   errorDescription:&processErrorDescription];
@@ -46,19 +63,29 @@
 // http://stackoverflow.com/questions/6841937/authorizationexecutewithprivileges-is-deprecated
 //
 - (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
+                     userPassword: (NSString *)userPassword
                      withArguments:(NSArray *)arguments
                             output:(NSString **)output
                   errorDescription:(NSString **)errorDescription {
     
-    NSString * allArgs = [arguments componentsJoinedByString:@" "];
-    NSString * fullScript = [NSString stringWithFormat:@"%@ %@", scriptPath, allArgs];
-    
+    NSString *allArgs = [arguments componentsJoinedByString:@" "];
+    NSString *fullScript = [NSString stringWithFormat:@"%@ %@", scriptPath, allArgs];
+    NSString *script;
     NSDictionary *errorInfo = [NSDictionary new];
-    NSString *script =  [NSString stringWithFormat:@"do shell script \"%@\" with administrator privileges", fullScript];
-    
-    NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:script];
-    NSAppleEventDescriptor * eventResult = [appleScript executeAndReturnError:&errorInfo];
-    
+    NSAppleScript *appleScript;
+    NSAppleEventDescriptor *eventResult;
+
+    if (userPassword.length > 0) {
+        userPassword = [NSString stringWithFormat:@"password \"%@\"", self.passwordField.stringValue];
+    } else {
+        userPassword = @"";
+    }
+
+    script = [NSString stringWithFormat:@"do shell script \"%@\" %@ with administrator privileges", fullScript, userPassword];
+
+    appleScript = [[NSAppleScript new] initWithSource:script];
+    eventResult = [appleScript executeAndReturnError:&errorInfo];
+
     // Check errorInfo
     if (! eventResult)
     {
