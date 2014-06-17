@@ -217,6 +217,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Suite Potato";
 				TargetAttributes = {
+					36A9D57F194BB96E002AC76E = {
+						DevelopmentTeam = 62X274W9SU;
+					};
 					36A9D5A0194BB96E002AC76E = {
 						TestTargetID = 36A9D57F194BB96E002AC76E;
 					};
@@ -450,6 +453,7 @@
 			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
@@ -464,6 +468,7 @@
 			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
