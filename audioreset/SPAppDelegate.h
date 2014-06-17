@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <IYLoginItem/NSBundle+LoginItem.h>
 
 @interface SPAppDelegate : NSObject <NSApplicationDelegate>
 
@@ -33,6 +34,5 @@
 - (NSString *)bundleVersionNumber;
 
 - (void)receiveWakeNote: (NSNotification*) note;
-- (void)fileNotifications;
 
 @end

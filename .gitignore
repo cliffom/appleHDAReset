@@ -1,2 +1,5 @@
 audioreset.xcodeproj/xcuserdata/*
 audioreset.xcodeproj/project.xcworkspace/*
+Podfile.lock
+Pods/
+audioreset.xcworkspace/

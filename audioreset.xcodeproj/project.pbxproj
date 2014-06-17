@@ -20,6 +20,7 @@
 		36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D5AD194BB96E002AC76E /* audioresetTests.m */; };
 		36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */; };
 		36B5E5EE194BEE73003D881D /* resetHDA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 36B5E5ED194BEDC0003D881D /* resetHDA.sh */; };
+		C511E1E9B1564C10AFA25052 /* libPods-audioreset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
 		36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Layer_16-01-16.png"; sourceTree = "<group>"; };
 		36B5E5ED194BEDC0003D881D /* resetHDA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = resetHDA.sh; sourceTree = "<group>"; };
+		C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-audioreset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audioreset.xcconfig"; path = "Pods/Pods-audioreset.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A9D584194BB96E002AC76E /* Cocoa.framework in Frameworks */,
+				C511E1E9B1564C10AFA25052 /* libPods-audioreset.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +88,7 @@
 				36A9D5A7194BB96E002AC76E /* audioresetTests */,
 				36A9D582194BB96E002AC76E /* Frameworks */,
 				36A9D581194BB96E002AC76E /* Products */,
+				FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +107,7 @@
 				36A9D583194BB96E002AC76E /* Cocoa.framework */,
 				36A9D5A2194BB96E002AC76E /* XCTest.framework */,
 				36A9D585194BB96E002AC76E /* Other Frameworks */,
+				C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,10 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioreset" */;
 			buildPhases = (
+				AE6CC9F254B0445BA7217574 /* Check Pods Manifest.lock */,
 				36A9D57C194BB96E002AC76E /* Sources */,
 				36A9D57D194BB96E002AC76E /* Frameworks */,
 				8ECF2C08194C128800BE71F4 /* ShellScript */,
 				36A9D57E194BB96E002AC76E /* Resources */,
+				3FD7CD584B3D4D87842FE93D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +266,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3FD7CD584B3D4D87842FE93D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-audioreset-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8ECF2C08194C128800BE71F4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +293,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "chmod +x audioreset/resetHDA.sh";
+		};
+		AE6CC9F254B0445BA7217574 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -409,6 +447,7 @@
 		};
 		36A9D5B2194BB96E002AC76E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -422,6 +461,7 @@
 		};
 		36A9D5B3194BB96E002AC76E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
