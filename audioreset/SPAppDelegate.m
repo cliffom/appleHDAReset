@@ -28,6 +28,17 @@
 #pragma mark -
 #pragma mark IBActions
 
+- (IBAction)closePreferencesWindow:(id)sender {
+    if (_passwordField.stringValue.length > 0) {
+        [SSKeychain setPassword:_passwordField.stringValue
+                     forService:[[NSBundle mainBundle] bundleIdentifier]
+                        account:NSUserName()];
+    } else {
+        [SSKeychain deletePasswordForService:[[NSBundle mainBundle] bundleIdentifier] account:NSUserName()];
+    }
+    [_preferencesWindow close];
+}
+
 - (IBAction)openAboutWindow:(id)sender {
     [self openWindow:_aboutWindow sender:sender];
 }
@@ -144,5 +155,9 @@
         
         return YES;
     }
+}
+
+- (NSString *)userPassword {
+    return [SSKeychain passwordForService:[[NSBundle mainBundle] bundleIdentifier] account:NSUserName()];
 }
 @end

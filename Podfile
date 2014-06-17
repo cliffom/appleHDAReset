@@ -3,6 +3,7 @@
 
 target "audioreset" do
     pod 'IYLoginItem'
+    pod 'SSKeychain'
 end
 
 target "audioresetTests" do

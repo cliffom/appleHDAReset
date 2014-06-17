@@ -128,9 +128,9 @@
                             </allowedInputSourceLocales>
                         </secureTextFieldCell>
                         <connections>
-                            <binding destination="iFi-KJ-7zi" name="value" keyPath="values.userPassword" id="XwH-Xe-yhD">
+                            <binding destination="AgE-u6-GpR" name="value" keyPath="selection.userPassword" id="46R-c1-NII">
                                 <dictionary key="options">
-                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                    <string key="NSNoSelectionPlaceholder">Your password (optional)</string>
                                 </dictionary>
                             </binding>
                         </connections>
@@ -165,7 +165,7 @@ DQ
 </string>
                         </buttonCell>
                         <connections>
-                            <action selector="performClose:" target="xdV-GJ-9GQ" id="Izs-bt-cIw"/>
+                            <action selector="closePreferencesWindow:" target="Voe-Tx-rLC" id="acU-TN-uPZ"/>
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-NN-cwb">

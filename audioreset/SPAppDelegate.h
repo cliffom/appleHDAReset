@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <IYLoginItem/NSBundle+LoginItem.h>
+#import <SSKeychain/SSKeychain.h>
 
 @interface SPAppDelegate : NSObject <NSApplicationDelegate>
 
@@ -18,6 +19,7 @@
 @property (weak)                IBOutlet NSButton *runOnWake;
 @property (strong, nonatomic)   NSStatusItem *statusItem;
 
+- (IBAction)closePreferencesWindow:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
 - (IBAction)openPreferencesWindow:(id)sender;
 - (IBAction)resetAppleHDAInBackground:(id)sender;
@@ -32,4 +34,5 @@
                     withArguments:(NSArray *)arguments
                            output:(NSString **)output
                  errorDescription:(NSString **)errorDescription;
+- (NSString *)userPassword;
 @end
