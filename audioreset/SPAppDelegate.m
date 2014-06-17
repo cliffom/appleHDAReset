@@ -25,14 +25,17 @@
 }
 
 - (IBAction)openAboutWindow:(id)sender {
-    [NSApp activateIgnoringOtherApps:YES];
-	[_aboutWindow makeKeyAndOrderFront:sender];
+    [self openWindow:_aboutWindow sender:sender];
 }
 
 - (IBAction)openPreferencesWindow:(id)sender {
-    [NSApp activateIgnoringOtherApps:YES];
-	[_preferencesWindow makeKeyAndOrderFront:sender];
+    [self openWindow:_preferencesWindow sender:sender];
+}
 
+- (void)openWindow:(NSWindow *)window
+            sender: (id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+	[window makeKeyAndOrderFront:sender];
 }
 
 - (IBAction)resetAppleHDAAction:(id)sender {

@@ -21,10 +21,12 @@
 - (IBAction)openPreferencesWindow:(id)sender;
 - (IBAction)resetAppleHDAAction:(id)sender;
 - (void)resetAppleHDAInBackground;
-- (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
+- (BOOL)runProcessAsAdministrator:(NSString *)scriptPath
                      userPassword:(NSString *)userPassword
-                     withArguments:(NSArray *)arguments
-                            output:(NSString **)output
-                  errorDescription:(NSString **)errorDescription;
+                    withArguments:(NSArray *)arguments
+                           output:(NSString **)output
+                 errorDescription:(NSString **)errorDescription;
+- (void)openWindow:(NSWindow *)window
+            sender:(id)sender;
 
 @end
