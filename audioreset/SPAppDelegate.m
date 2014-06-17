@@ -117,7 +117,7 @@
     NSAppleEventDescriptor *eventResult;
 
     if (userPassword.length > 0) {
-        userPassword = [NSString stringWithFormat:@"password \"%@\"", self.passwordField.stringValue];
+        userPassword = [NSString stringWithFormat:@"password \"%@\"", _passwordField.stringValue];
     } else {
         userPassword = @"";
     }
