@@ -109,14 +109,14 @@
         </window>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="xdV-GJ-9GQ">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="283" y="305" width="411" height="170"/>
+            <rect key="contentRect" x="283" y="305" width="411" height="291"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="5dE-cr-Yvc">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="170"/>
+                <rect key="frame" x="0.0" y="0.0" width="411" height="291"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-VY-2iT">
-                        <rect key="frame" x="92" y="108" width="299" height="22"/>
+                        <rect key="frame" x="92" y="207" width="299" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Your password (optional)" drawsBackground="YES" usesSingleLineMode="YES" id="tOh-8Y-Y7Y">
                             <font key="font" metaFont="system"/>
@@ -135,7 +135,7 @@
                         </connections>
                     </secureTextField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-5R-nTC">
-                        <rect key="frame" x="18" y="111" width="66" height="17"/>
+                        <rect key="frame" x="18" y="210" width="66" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="eO8-5n-aA3">
                             <font key="font" metaFont="system"/>
@@ -144,7 +144,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBI-5D-XWG">
-                        <rect key="frame" x="20" y="49" width="442" height="51"/>
+                        <rect key="frame" x="20" y="148" width="442" height="51"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="Tty-yx-5L2">
                             <font key="font" metaFont="system"/>
@@ -154,7 +154,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="du2-7c-R9e">
-                        <rect key="frame" x="315" y="13" width="82" height="32"/>
+                        <rect key="frame" x="315" y="112" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fjo-fe-Sz0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -168,7 +168,7 @@ DQ
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-NN-cwb">
-                        <rect key="frame" x="18" y="134" width="252" height="18"/>
+                        <rect key="frame" x="18" y="233" width="252" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Reset AppleHDA on wake from sleep" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6Ag-lX-0fa">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -180,6 +180,18 @@ DQ
                                     <bool key="NSValidatesImmediately" value="YES"/>
                                 </dictionary>
                             </binding>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khu-N7-xJF">
+                        <rect key="frame" x="18" y="255" width="196" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Open automatically at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tp3-Vu-pMb">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleAddToLoginItems:" target="Voe-Tx-rLC" id="k1g-gy-72X"/>
+                            <binding destination="iFi-KJ-7zi" name="value" keyPath="values.openAtLogin" id="Wru-RR-mEc"/>
                         </connections>
                     </button>
                 </subviews>

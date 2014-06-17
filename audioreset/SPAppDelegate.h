@@ -18,6 +18,7 @@
 @property (weak) IBOutlet NSButton *runOnWake;
 @property (weak) IBOutlet NSSecureTextField *passwordField;
 
+- (IBAction)toggleAddToLoginItems:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
 - (IBAction)openPreferencesWindow:(id)sender;
 - (IBAction)resetAppleHDAAction:(id)sender;
