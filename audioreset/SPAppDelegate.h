@@ -10,7 +10,7 @@
 #import <IYLoginItem/NSBundle+LoginItem.h>
 #import <SSKeychain/SSKeychain.h>
 
-@interface SPAppDelegate : NSObject <NSApplicationDelegate>
+@interface SPAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 @property (unsafe_unretained)   IBOutlet NSWindow *aboutWindow;
 @property (weak)                IBOutlet NSMenu *audioResetMenu;
@@ -29,5 +29,7 @@
 - (void)openWindow:(NSWindow *)window sender:(id)sender;
 - (void)receiveWakeNote: (NSNotification*) note;
 - (void)resetAppleHDA;
+- (void)sendNotification:(NSString *)message;
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification;
 - (NSString *)userPassword;
 @end

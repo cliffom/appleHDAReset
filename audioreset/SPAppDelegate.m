@@ -24,6 +24,8 @@
     _statusItem.highlightMode = YES;
     _statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
     [_statusItem setMenu:_audioResetMenu];
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
 
 #pragma mark -
@@ -89,11 +91,24 @@
                                      withArguments:[NSArray arrayWithObjects:nil]];
 
     if (!success) {
-        NSLog(@"%@", spHelper.errorDescription);
+        [self sendNotification:spHelper.errorDescription];
     }
     else {
-        NSLog(@"Success!");
+        [self sendNotification:@"AppleHDA has been reset successfully."];
     }
+}
+
+- (void)sendNotification:(NSString *)message {
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = @"Reset AppleHDA";
+    notification.informativeText = message;
+    //notification.soundName = NSUserNotificationDefaultSoundName;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification {
+    return YES;
 }
 
 - (NSString *)userPassword {
