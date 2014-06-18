@@ -24,6 +24,8 @@
     _statusItem.highlightMode = YES;
     _statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
     [_statusItem setMenu:_audioResetMenu];
+    [_audioResetMenu setAutoenablesItems:false];
+    [_passwordField setEnabled:[_useSavedPassword state]];
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
 }
@@ -36,13 +38,17 @@
 }
 
 - (IBAction)closePreferencesWindow:(id)sender {
-    if (_passwordField.stringValue.length > 0) {
+    if (_passwordField.stringValue.length > 0 && _useSavedPassword.state == NSOnState) {
         [SSKeychain setPassword:_passwordField.stringValue
                      forService:[[NSBundle mainBundle] bundleIdentifier]
                         account:NSUserName()];
     } else {
         [SSKeychain deletePasswordForService:[[NSBundle mainBundle] bundleIdentifier] account:NSUserName()];
+        _useSavedPassword.state = NSOffState;
+        _passwordField.stringValue = @"";
+        [_passwordField setEnabled:false];
     }
+    [_resetAppleHDAMenuItem setEnabled:true];
     [_preferencesWindow close];
 }
 
@@ -52,6 +58,11 @@
 
 - (IBAction)openPreferencesWindow:(id)sender {
     [self openWindow:_preferencesWindow sender:sender];
+    [_resetAppleHDAMenuItem setEnabled:false];
+}
+
+- (IBAction)resetAppleHDAInBackground:(id)sender {
+    [self performSelectorInBackground:@selector(resetAppleHDA) withObject:nil];
 }
 
 - (IBAction)toggleAddToLoginItems:(id)sender {
@@ -62,8 +73,13 @@
     }
 }
 
-- (IBAction)resetAppleHDAInBackground:(id)sender {
-    [self performSelectorInBackground:@selector(resetAppleHDA) withObject:nil];
+- (IBAction)toggleUseSavedPassword:(id)sender {
+    if ([sender state] == NSOnState) {
+        [_passwordField setEnabled:true];
+        [_passwordField becomeFirstResponder];
+    } else {
+        [_passwordField setEnabled:false];
+    }
 }
 
 #pragma mark -
@@ -119,4 +135,5 @@
 - (NSString *)userPassword {
     return [SSKeychain passwordForService:[[NSBundle mainBundle] bundleIdentifier] account:NSUserName()];
 }
+
 @end

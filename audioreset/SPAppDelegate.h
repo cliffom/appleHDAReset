@@ -18,6 +18,8 @@
 @property (unsafe_unretained)   IBOutlet NSWindow *preferencesWindow;
 @property (weak)                IBOutlet NSButton *runOnWake;
 @property (strong, nonatomic)   NSStatusItem *statusItem;
+@property (weak)                IBOutlet NSButton *useSavedPassword;
+@property (weak)                IBOutlet NSMenuItem *resetAppleHDAMenuItem;
 
 - (IBAction)closeAboutWindow:(id)sender;
 - (IBAction)closePreferencesWindow:(id)sender;
@@ -25,6 +27,7 @@
 - (IBAction)openPreferencesWindow:(id)sender;
 - (IBAction)resetAppleHDAInBackground:(id)sender;
 - (IBAction)toggleAddToLoginItems:(id)sender;
+- (IBAction)toggleUseSavedPassword:(id)sender;
 
 - (NSString *)bundleVersionNumber;
 - (void)openWindow:(NSWindow *)window sender:(id)sender;

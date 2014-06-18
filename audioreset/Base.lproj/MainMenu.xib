@@ -17,7 +17,9 @@
                 <outlet property="audioResetMenu" destination="fTu-lS-qti" id="vYv-T4-Adj"/>
                 <outlet property="passwordField" destination="h3e-VY-2iT" id="7QE-FI-wpb"/>
                 <outlet property="preferencesWindow" destination="xdV-GJ-9GQ" id="JVB-wI-GCA"/>
+                <outlet property="resetAppleHDAMenuItem" destination="s2l-ta-hYj" id="yHU-R3-Fcp"/>
                 <outlet property="runOnWake" destination="4Qw-NN-cwb" id="mQI-nq-uA1"/>
+                <outlet property="useSavedPassword" destination="A89-4G-Hoh" id="ipO-vh-hAG"/>
             </connections>
         </customObject>
         <menu id="fTu-lS-qti">
@@ -128,7 +130,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-VY-2iT">
-                        <rect key="frame" x="92" y="176" width="299" height="22"/>
+                        <rect key="frame" x="137" y="176" width="254" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Your password (optional)" drawsBackground="YES" usesSingleLineMode="YES" id="tOh-8Y-Y7Y">
                             <font key="font" metaFont="system"/>
@@ -146,15 +148,6 @@
                             </binding>
                         </connections>
                     </secureTextField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-5R-nTC">
-                        <rect key="frame" x="18" y="179" width="66" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="eO8-5n-aA3">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBI-5D-XWG">
                         <rect key="frame" x="18" y="49" width="375" height="119"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -204,6 +197,20 @@ DQ
                         <connections>
                             <action selector="toggleAddToLoginItems:" target="Voe-Tx-rLC" id="k1g-gy-72X"/>
                             <binding destination="iFi-KJ-7zi" name="value" keyPath="values.openAtLogin" id="Wru-RR-mEc"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A89-4G-Hoh">
+                        <rect key="frame" x="18" y="178" width="113" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Save Password" bezelStyle="regularSquare" imagePosition="left" inset="2" id="347-ug-EE2">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <binding destination="iFi-KJ-7zi" name="value" keyPath="values.useSavedPassword" id="35y-Sk-5cc"/>
+                            </connections>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleUseSavedPassword:" target="Voe-Tx-rLC" id="Hjf-Tm-cMQ"/>
                         </connections>
                     </button>
                 </subviews>
