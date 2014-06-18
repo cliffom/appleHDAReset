@@ -20,6 +20,7 @@
 		36A9D5AE194BB96E002AC76E /* audioresetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D5AD194BB96E002AC76E /* audioresetTests.m */; };
 		36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */; };
 		36B5E5EE194BEE73003D881D /* resetHDA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 36B5E5ED194BEDC0003D881D /* resetHDA.sh */; };
+		36D20A6D19511BE7000FD226 /* SPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D20A6C19511BE7000FD226 /* SPHelper.m */; };
 		C511E1E9B1564C10AFA25052 /* libPods-audioreset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
 		36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Layer_16-01-16.png"; sourceTree = "<group>"; };
 		36B5E5ED194BEDC0003D881D /* resetHDA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = resetHDA.sh; sourceTree = "<group>"; };
+		36D20A6B19511BE7000FD226 /* SPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHelper.h; sourceTree = "<group>"; };
+		36D20A6C19511BE7000FD226 /* SPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHelper.m; sourceTree = "<group>"; };
 		C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-audioreset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audioreset.xcconfig"; path = "Pods/Pods-audioreset.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,8 @@
 		36A9D589194BB96E002AC76E /* audioreset */ = {
 			isa = PBXGroup;
 			children = (
+				36D20A6B19511BE7000FD226 /* SPHelper.h */,
+				36D20A6C19511BE7000FD226 /* SPHelper.m */,
 				36A9D595194BB96E002AC76E /* SPAppDelegate.h */,
 				36A9D596194BB96E002AC76E /* SPAppDelegate.m */,
 				36A9D598194BB96E002AC76E /* MainMenu.xib */,
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D20A6D19511BE7000FD226 /* SPHelper.m in Sources */,
 				36A9D590194BB96E002AC76E /* main.m in Sources */,
 				36A9D597194BB96E002AC76E /* SPAppDelegate.m in Sources */,
 			);

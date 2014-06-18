@@ -7,6 +7,7 @@
 //
 
 #import "SPAppDelegate.h"
+#import "SPHelper.h"
 
 @implementation SPAppDelegate
 
@@ -84,7 +85,7 @@
     NSString *output = nil;
     NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
-    BOOL success = [self runProcessAsAdministrator:resetScript
+    BOOL success = [SPHelper runProcessAsAdministrator:resetScript
                                       userPassword:_passwordField.stringValue
                                      withArguments:[NSArray arrayWithObjects:nil]
                                             output:&output
@@ -96,64 +97,6 @@
     }
     else {
         NSLog(@"Success!");
-    }
-}
-
-//
-// Credit to the stackoverflow thread at
-// http://stackoverflow.com/questions/6841937/authorizationexecutewithprivileges-is-deprecated
-//
-- (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
-                     userPassword: (NSString *)userPassword
-                     withArguments:(NSArray *)arguments
-                            output:(NSString **)output
-                  errorDescription:(NSString **)errorDescription {
-    
-    NSString *allArgs = [arguments componentsJoinedByString:@" "];
-    NSString *fullScript = [NSString stringWithFormat:@"%@ %@", scriptPath, allArgs];
-    NSString *script;
-    NSDictionary *errorInfo = [NSDictionary new];
-    NSAppleScript *appleScript;
-    NSAppleEventDescriptor *eventResult;
-
-    if (userPassword.length > 0) {
-        userPassword = [NSString stringWithFormat:@"password \"%@\"", _passwordField.stringValue];
-    } else {
-        userPassword = @"";
-    }
-
-    script = [NSString stringWithFormat:@"do shell script \"%@\" %@ with administrator privileges", fullScript, userPassword];
-
-    appleScript = [[NSAppleScript new] initWithSource:script];
-    eventResult = [appleScript executeAndReturnError:&errorInfo];
-
-    // Check errorInfo
-    if (! eventResult)
-    {
-        // Describe common errors
-        *errorDescription = nil;
-        if ([errorInfo valueForKey:NSAppleScriptErrorNumber])
-        {
-            NSNumber * errorNumber = (NSNumber *)[errorInfo valueForKey:NSAppleScriptErrorNumber];
-            if ([errorNumber intValue] == -128)
-                *errorDescription = @"The administrator password is required to do this.";
-        }
-        
-        // Set error message from provided message
-        if (*errorDescription == nil)
-        {
-            if ([errorInfo valueForKey:NSAppleScriptErrorMessage])
-                *errorDescription =  (NSString *)[errorInfo valueForKey:NSAppleScriptErrorMessage];
-        }
-        
-        return NO;
-    }
-    else
-    {
-        // Set output to the AppleScript's output
-        *output = [eventResult stringValue];
-        
-        return YES;
     }
 }
 

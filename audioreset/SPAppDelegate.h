@@ -29,10 +29,5 @@
 - (void)openWindow:(NSWindow *)window sender:(id)sender;
 - (void)receiveWakeNote: (NSNotification*) note;
 - (void)resetAppleHDA;
-- (BOOL)runProcessAsAdministrator:(NSString *)scriptPath
-                     userPassword:(NSString *)userPassword
-                    withArguments:(NSArray *)arguments
-                           output:(NSString **)output
-                 errorDescription:(NSString **)errorDescription;
 - (NSString *)userPassword;
 @end
