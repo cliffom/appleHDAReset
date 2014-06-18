@@ -31,6 +31,10 @@
 #pragma mark -
 #pragma mark IBActions
 
+- (IBAction)closeAboutWindow:(id)sender {
+    [_aboutWindow close];
+}
+
 - (IBAction)closePreferencesWindow:(id)sender {
     if (_passwordField.stringValue.length > 0) {
         [SSKeychain setPassword:_passwordField.stringValue
@@ -84,7 +88,8 @@
 }
 
 - (void)resetAppleHDA {
-    NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
+    NSString *bundlePath = [[[NSBundle mainBundle] bundlePath] stringByReplacingOccurrencesOfString:@" " withString:@"\\\\ "];
+    NSString *resetScript = [bundlePath stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
     SPHelper *spHelper = [[SPHelper alloc] init];
     BOOL success = [spHelper runProcessAsAdministrator:resetScript
                                       userPassword:_passwordField.stringValue
@@ -94,13 +99,13 @@
         [self sendNotification:spHelper.errorDescription];
     }
     else {
-        [self sendNotification:@"AppleHDA has been reset successfully."];
+        [self sendNotification:@"Your audio system has been reset successfully."];
     }
 }
 
 - (void)sendNotification:(NSString *)message {
     NSUserNotification *notification = [[NSUserNotification alloc] init];
-    notification.title = @"Reset AppleHDA";
+    notification.title = @"Reset Audio";
     notification.informativeText = message;
     //notification.soundName = NSUserNotificationDefaultSoundName;
     

@@ -1,5 +1,8 @@
-audioreset.xcodeproj/xcuserdata/*
-audioreset.xcodeproj/project.xcworkspace/*
 Podfile.lock
 Pods/
+audioreset.xcodeproj/xcuserdata/*
+audioreset.xcodeproj/project.xcworkspace/*
+Reset Audio.xcodeproj/xcuserdata/*
+Reset Audio.xcodeproj/project.xcworkspace/*
 audioreset.xcworkspace/
+Reset Audio.xcworkspace/

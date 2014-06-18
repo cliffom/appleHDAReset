@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126A5BC4742D44D586342239 /* libPods-Reset Audio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D552EAC170244EDB182E3EE /* libPods-Reset Audio.a */; };
 		36A9D584194BB96E002AC76E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D583194BB96E002AC76E /* Cocoa.framework */; };
 		36A9D58E194BB96E002AC76E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D58C194BB96E002AC76E /* InfoPlist.strings */; };
 		36A9D590194BB96E002AC76E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A9D58F194BB96E002AC76E /* main.m */; };
@@ -21,7 +22,6 @@
 		36A9D5C5194BE03E002AC76E /* Layer_16-01-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */; };
 		36B5E5EE194BEE73003D881D /* resetHDA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 36B5E5ED194BEDC0003D881D /* resetHDA.sh */; };
 		36D20A6D19511BE7000FD226 /* SPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D20A6C19511BE7000FD226 /* SPHelper.m */; };
-		C511E1E9B1564C10AFA25052 /* libPods-audioreset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,29 +35,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36A9D580194BB96E002AC76E /* audioreset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioreset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reset Audio.xcconfig"; path = "Pods/Pods-Reset Audio.xcconfig"; sourceTree = "<group>"; };
+		36A9D580194BB96E002AC76E /* Reset Audio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reset Audio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9D583194BB96E002AC76E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		36A9D586194BB96E002AC76E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		36A9D587194BB96E002AC76E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		36A9D588194BB96E002AC76E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		36A9D58B194BB96E002AC76E /* audioreset-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "audioreset-Info.plist"; sourceTree = "<group>"; };
+		36A9D58B194BB96E002AC76E /* Reset Audio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reset Audio-Info.plist"; sourceTree = "<group>"; };
 		36A9D58D194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36A9D58F194BB96E002AC76E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		36A9D591194BB96E002AC76E /* audioreset-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "audioreset-Prefix.pch"; sourceTree = "<group>"; };
+		36A9D591194BB96E002AC76E /* Reset Audio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reset Audio-Prefix.pch"; sourceTree = "<group>"; };
 		36A9D593194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		36A9D595194BB96E002AC76E /* SPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAppDelegate.h; sourceTree = "<group>"; };
 		36A9D596194BB96E002AC76E /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
 		36A9D599194BB96E002AC76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		36A9D59B194BB96E002AC76E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = audioresetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A9D5A1194BB96E002AC76E /* Reset AudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reset AudioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9D5A2194BB96E002AC76E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		36A9D5A9194BB96E002AC76E /* audioresetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "audioresetTests-Info.plist"; sourceTree = "<group>"; };
+		36A9D5A9194BB96E002AC76E /* Reset AudioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reset AudioTests-Info.plist"; sourceTree = "<group>"; };
 		36A9D5AB194BB96E002AC76E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36A9D5AD194BB96E002AC76E /* audioresetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioresetTests.m; sourceTree = "<group>"; };
 		36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Layer_16-01-16.png"; sourceTree = "<group>"; };
 		36B5E5ED194BEDC0003D881D /* resetHDA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = resetHDA.sh; sourceTree = "<group>"; };
 		36D20A6B19511BE7000FD226 /* SPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHelper.h; sourceTree = "<group>"; };
 		36D20A6C19511BE7000FD226 /* SPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHelper.m; sourceTree = "<group>"; };
+		4D552EAC170244EDB182E3EE /* libPods-Reset Audio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reset Audio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-audioreset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audioreset.xcconfig"; path = "Pods/Pods-audioreset.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A9D584194BB96E002AC76E /* Cocoa.framework in Frameworks */,
-				C511E1E9B1564C10AFA25052 /* libPods-audioreset.a in Frameworks */,
+				126A5BC4742D44D586342239 /* libPods-Reset Audio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,14 +94,15 @@
 				36A9D582194BB96E002AC76E /* Frameworks */,
 				36A9D581194BB96E002AC76E /* Products */,
 				FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */,
+				1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		36A9D581194BB96E002AC76E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36A9D580194BB96E002AC76E /* audioreset.app */,
-				36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */,
+				36A9D580194BB96E002AC76E /* Reset Audio.app */,
+				36A9D5A1194BB96E002AC76E /* Reset AudioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +114,7 @@
 				36A9D5A2194BB96E002AC76E /* XCTest.framework */,
 				36A9D585194BB96E002AC76E /* Other Frameworks */,
 				C6588E7C77E54EFBB6748978 /* libPods-audioreset.a */,
+				4D552EAC170244EDB182E3EE /* libPods-Reset Audio.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,10 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				36A9D5C4194BE03E002AC76E /* Layer_16-01-16.png */,
-				36A9D58B194BB96E002AC76E /* audioreset-Info.plist */,
+				36A9D58B194BB96E002AC76E /* Reset Audio-Info.plist */,
 				36A9D58C194BB96E002AC76E /* InfoPlist.strings */,
 				36A9D58F194BB96E002AC76E /* main.m */,
-				36A9D591194BB96E002AC76E /* audioreset-Prefix.pch */,
+				36A9D591194BB96E002AC76E /* Reset Audio-Prefix.pch */,
 				36A9D592194BB96E002AC76E /* Credits.rtf */,
 				36B5E5ED194BEDC0003D881D /* resetHDA.sh */,
 			);
@@ -165,7 +169,7 @@
 		36A9D5A8194BB96E002AC76E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				36A9D5A9194BB96E002AC76E /* audioresetTests-Info.plist */,
+				36A9D5A9194BB96E002AC76E /* Reset AudioTests-Info.plist */,
 				36A9D5AA194BB96E002AC76E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -174,29 +178,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36A9D57F194BB96E002AC76E /* audioreset */ = {
+		36A9D57F194BB96E002AC76E /* Reset Audio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioreset" */;
+			buildConfigurationList = 36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "Reset Audio" */;
 			buildPhases = (
-				AE6CC9F254B0445BA7217574 /* Check Pods Manifest.lock */,
+				AFA634715DC048438CAFF085 /* Check Pods Manifest.lock */,
 				36A9D57C194BB96E002AC76E /* Sources */,
 				36A9D57D194BB96E002AC76E /* Frameworks */,
 				8ECF2C08194C128800BE71F4 /* ShellScript */,
 				36A9D57E194BB96E002AC76E /* Resources */,
-				3FD7CD584B3D4D87842FE93D /* Copy Pods Resources */,
+				06B1C619D2B841649CA8858C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = audioreset;
+			name = "Reset Audio";
 			productName = audioreset;
-			productReference = 36A9D580194BB96E002AC76E /* audioreset.app */;
+			productReference = 36A9D580194BB96E002AC76E /* Reset Audio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36A9D5A0194BB96E002AC76E /* audioresetTests */ = {
+		36A9D5A0194BB96E002AC76E /* Reset AudioTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioresetTests" */;
+			buildConfigurationList = 36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "Reset AudioTests" */;
 			buildPhases = (
 				36A9D59D194BB96E002AC76E /* Sources */,
 				36A9D59E194BB96E002AC76E /* Frameworks */,
@@ -207,9 +211,9 @@
 			dependencies = (
 				36A9D5A6194BB96E002AC76E /* PBXTargetDependency */,
 			);
-			name = audioresetTests;
+			name = "Reset AudioTests";
 			productName = audioresetTests;
-			productReference = 36A9D5A1194BB96E002AC76E /* audioresetTests.xctest */;
+			productReference = 36A9D5A1194BB96E002AC76E /* Reset AudioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "audioreset" */;
+			buildConfigurationList = 36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "Reset Audio" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,8 +247,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36A9D57F194BB96E002AC76E /* audioreset */,
-				36A9D5A0194BB96E002AC76E /* audioresetTests */,
+				36A9D57F194BB96E002AC76E /* Reset Audio */,
+				36A9D5A0194BB96E002AC76E /* Reset AudioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,7 +278,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3FD7CD584B3D4D87842FE93D /* Copy Pods Resources */ = {
+		06B1C619D2B841649CA8858C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +290,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-audioreset-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Reset Audio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8ECF2C08194C128800BE71F4 /* ShellScript */ = {
@@ -302,7 +306,7 @@
 			shellPath = /bin/sh;
 			shellScript = "chmod +x audioreset/resetHDA.sh";
 		};
-		AE6CC9F254B0445BA7217574 /* Check Pods Manifest.lock */ = {
+		AFA634715DC048438CAFF085 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +347,7 @@
 /* Begin PBXTargetDependency section */
 		36A9D5A6194BB96E002AC76E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36A9D57F194BB96E002AC76E /* audioreset */;
+			target = 36A9D57F194BB96E002AC76E /* Reset Audio */;
 			targetProxy = 36A9D5A5194BB96E002AC76E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -456,30 +460,30 @@
 		};
 		36A9D5B2194BB96E002AC76E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
+			baseConfigurationReference = 1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
-				INFOPLIST_FILE = "audioreset/audioreset-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "audioreset/Reset Audio-Prefix.pch";
+				INFOPLIST_FILE = "audioreset/Reset Audio-Info.plist";
+				PRODUCT_NAME = "Reset Audio";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		36A9D5B3194BB96E002AC76E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE6D9AFBB6D148E693C14841 /* Pods-audioreset.xcconfig */;
+			baseConfigurationReference = 1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
-				INFOPLIST_FILE = "audioreset/audioreset-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "audioreset/Reset Audio-Prefix.pch";
+				INFOPLIST_FILE = "audioreset/Reset Audio-Info.plist";
+				PRODUCT_NAME = "Reset Audio";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -499,8 +503,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "audioresetTests/audioresetTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "audioresetTests/Reset AudioTests-Info.plist";
+				PRODUCT_NAME = "Reset AudioTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -517,8 +521,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "audioreset/audioreset-Prefix.pch";
-				INFOPLIST_FILE = "audioresetTests/audioresetTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "audioresetTests/Reset AudioTests-Info.plist";
+				PRODUCT_NAME = "Reset AudioTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -527,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "audioreset" */ = {
+		36A9D57B194BB96E002AC76E /* Build configuration list for PBXProject "Reset Audio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A9D5AF194BB96E002AC76E /* Debug */,
@@ -536,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioreset" */ = {
+		36A9D5B1194BB96E002AC76E /* Build configuration list for PBXNativeTarget "Reset Audio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A9D5B2194BB96E002AC76E /* Debug */,
@@ -545,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "audioresetTests" */ = {
+		36A9D5B4194BB96E002AC76E /* Build configuration list for PBXNativeTarget "Reset AudioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36A9D5B5194BB96E002AC76E /* Debug */,

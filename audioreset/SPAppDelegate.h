@@ -19,6 +19,7 @@
 @property (weak)                IBOutlet NSButton *runOnWake;
 @property (strong, nonatomic)   NSStatusItem *statusItem;
 
+- (IBAction)closeAboutWindow:(id)sender;
 - (IBAction)closePreferencesWindow:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
 - (IBAction)openPreferencesWindow:(id)sender;
