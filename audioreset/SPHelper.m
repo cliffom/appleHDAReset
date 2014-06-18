@@ -9,15 +9,19 @@
 #import "SPHelper.h"
 
 @implementation SPHelper
+
+- (id)init {
+    self = [super init];
+    return self;
+}
+
 //
 // Credit to the stackoverflow thread at
 // http://stackoverflow.com/questions/6841937/authorizationexecutewithprivileges-is-deprecated
 //
-+ (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
+- (BOOL)runProcessAsAdministrator:(NSString*)scriptPath
                      userPassword: (NSString *)userPassword
-                    withArguments:(NSArray *)arguments
-                           output:(NSString **)output
-                 errorDescription:(NSString **)errorDescription {
+                    withArguments:(NSArray *)arguments {
 
     NSString *allArgs = [arguments componentsJoinedByString:@" "];
     NSString *fullScript = [NSString stringWithFormat:@"%@ %@", scriptPath, allArgs];
@@ -41,19 +45,19 @@
     if (! eventResult)
     {
         // Describe common errors
-        *errorDescription = nil;
+        _errorDescription = nil;
         if ([errorInfo valueForKey:NSAppleScriptErrorNumber])
         {
             NSNumber * errorNumber = (NSNumber *)[errorInfo valueForKey:NSAppleScriptErrorNumber];
             if ([errorNumber intValue] == -128)
-                *errorDescription = @"The administrator password is required to do this.";
+                _errorDescription = @"The administrator password is required to do this.";
         }
 
         // Set error message from provided message
-        if (*errorDescription == nil)
+        if (_errorDescription == nil)
         {
             if ([errorInfo valueForKey:NSAppleScriptErrorMessage])
-                *errorDescription =  (NSString *)[errorInfo valueForKey:NSAppleScriptErrorMessage];
+                _errorDescription = (NSString *)[errorInfo valueForKey:NSAppleScriptErrorMessage];
         }
 
         return NO;
@@ -61,7 +65,7 @@
     else
     {
         // Set output to the AppleScript's output
-        *output = [eventResult stringValue];
+        _output = [eventResult stringValue];
 
         return YES;
     }

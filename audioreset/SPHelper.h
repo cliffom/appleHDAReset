@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface SPHelper : NSObject
-+ (BOOL)runProcessAsAdministrator:(NSString *)scriptPath
+
+@property NSString *output;
+@property NSString *errorDescription;
+
+- (BOOL)runProcessAsAdministrator:(NSString *)scriptPath
                      userPassword:(NSString *)userPassword
-                    withArguments:(NSArray *)arguments
-                           output:(NSString **)output
-                 errorDescription:(NSString **)errorDescription;
+                    withArguments:(NSArray *)arguments;
 @end

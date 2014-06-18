@@ -82,18 +82,14 @@
 }
 
 - (void)resetAppleHDA {
-    NSString *output = nil;
-    NSString *processErrorDescription = nil;
     NSString *resetScript = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/resetHDA.sh"];
-    BOOL success = [SPHelper runProcessAsAdministrator:resetScript
+    SPHelper *spHelper = [[SPHelper alloc] init];
+    BOOL success = [spHelper runProcessAsAdministrator:resetScript
                                       userPassword:_passwordField.stringValue
-                                     withArguments:[NSArray arrayWithObjects:nil]
-                                            output:&output
-                                  errorDescription:&processErrorDescription];
+                                     withArguments:[NSArray arrayWithObjects:nil]];
 
     if (!success) {
-        NSLog(@"There was an issue:");
-        NSLog( @"%@", processErrorDescription );
+        NSLog(@"%@", spHelper.errorDescription);
     }
     else {
         NSLog(@"Success!");
