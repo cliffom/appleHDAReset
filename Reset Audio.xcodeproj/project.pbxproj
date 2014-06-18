@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reset Audio.xcconfig"; path = "Pods/Pods-Reset Audio.xcconfig"; sourceTree = "<group>"; };
+		3632E9DD195238B000F905A6 /* Reset Audio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Reset Audio.entitlements"; sourceTree = "<group>"; };
 		36A9D580194BB96E002AC76E /* Reset Audio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reset Audio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9D583194BB96E002AC76E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		36A9D586194BB96E002AC76E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +90,7 @@
 		36A9D577194BB96E002AC76E = {
 			isa = PBXGroup;
 			children = (
+				3632E9DD195238B000F905A6 /* Reset Audio.entitlements */,
 				36A9D589194BB96E002AC76E /* audioreset */,
 				36A9D5A7194BB96E002AC76E /* audioresetTests */,
 				36A9D582194BB96E002AC76E /* Frameworks */,
@@ -228,6 +230,11 @@
 				TargetAttributes = {
 					36A9D57F194BB96E002AC76E = {
 						DevelopmentTeam = 62X274W9SU;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					36A9D5A0194BB96E002AC76E = {
 						TestTargetID = 36A9D57F194BB96E002AC76E;
@@ -463,7 +470,8 @@
 			baseConfigurationReference = 1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_ENTITLEMENTS = "Reset Audio.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "audioreset/Reset Audio-Prefix.pch";
@@ -478,7 +486,8 @@
 			baseConfigurationReference = 1E2C6F57C40A4CC1B5F62003 /* Pods-Reset Audio.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_ENTITLEMENTS = "Reset Audio.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "audioreset/Reset Audio-Prefix.pch";
