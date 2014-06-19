@@ -105,7 +105,7 @@
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-Yf-Rbi">
                         <rect key="frame" x="17" y="58" width="56" height="56"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="Layer_16-01-16" id="OG7-c3-vlH"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="MenuBarIcon" id="OG7-c3-vlH"/>
                     </imageView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOT-ZQ-hRE">
                         <rect key="frame" x="392" y="13" width="74" height="32"/>
@@ -224,6 +224,6 @@ DQ
         </objectController>
     </objects>
     <resources>
-        <image name="Layer_16-01-16" width="10" height="16"/>
+        <image name="MenuBarIcon" width="16" height="16"/>
     </resources>
 </document>

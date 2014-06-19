@@ -22,7 +22,7 @@
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.title = @"";
     _statusItem.highlightMode = YES;
-    _statusItem.image = [NSImage imageNamed:@"Layer_16-01-16.png"];
+    _statusItem.image = [NSImage imageNamed:@"MenuBarIcon"];
     [_statusItem setMenu:_audioResetMenu];
     [_audioResetMenu setAutoenablesItems:false];
     [_passwordField setEnabled:[_useSavedPassword state]];
