@@ -12,16 +12,17 @@
 
 @interface SPAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
-@property (unsafe_unretained)   IBOutlet NSWindow *aboutWindow;
-@property (weak)                IBOutlet NSMenu *audioResetMenu;
-@property (weak)                IBOutlet NSButton *hideMenuBarIcon;
-@property (weak)                IBOutlet NSSecureTextField *passwordField;
-@property (unsafe_unretained)   IBOutlet NSWindow *preferencesWindow;
-@property (weak)                IBOutlet NSButton *runOnWake;
-@property (strong, nonatomic)   NSStatusItem *statusItem;
-@property (weak)                IBOutlet NSButton *useSavedPassword;
-@property (weak)                IBOutlet NSMenuItem *resetAppleHDAMenuItem;
-@property                       BOOL justLaunched;
+@property (weak)    IBOutlet NSWindow *aboutWindow;
+@property (weak)    IBOutlet NSMenu *audioResetMenu;
+@property (weak)    IBOutlet NSButton *hideMenuBarIcon;
+@property (weak)    IBOutlet NSSecureTextField *passwordField;
+@property (weak)    IBOutlet NSWindow *preferencesWindow;
+@property (weak)    IBOutlet NSButton *runOnWake;
+@property (strong)  NSStatusItem *statusItem;
+@property (weak)    IBOutlet NSButton *useSavedPassword;
+@property (weak)    IBOutlet NSMenuItem *resetAppleHDAMenuItem;
+
+@property   BOOL justLaunched;
 
 - (IBAction)closeAboutWindow:(id)sender;
 - (IBAction)closePreferencesWindow:(id)sender;
