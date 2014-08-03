@@ -12,22 +12,30 @@
 @implementation SPAppDelegate
 
 - (void)awakeFromNib {
+    
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    _justLaunched = true;
+    if (_hideMenuBarIcon.state == NSOffState) {
+        [self setMenuItem];
+    }
+    [_audioResetMenu setAutoenablesItems:false];
+    [_passwordField setEnabled:[_useSavedPassword state]];
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver: self
                                                            selector: @selector(receiveWakeNote:)
                                                                name: NSWorkspaceDidWakeNotification object: NULL];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    _statusItem.title = @"";
-    _statusItem.highlightMode = YES;
-    _statusItem.image = [NSImage imageNamed:@"MenuBarIcon"];
-    [_statusItem setMenu:_audioResetMenu];
-    [_audioResetMenu setAutoenablesItems:false];
-    [_passwordField setEnabled:[_useSavedPassword state]];
-    
-    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+- (void)applicationDidBecomeActive:(NSNotification *)notification {
+    if (!_justLaunched) {
+        [self openWindow:_preferencesWindow sender:nil];
+    } else {
+        _justLaunched = false;
+    }
 }
 
 #pragma mark -
@@ -49,6 +57,7 @@
         [_passwordField setEnabled:false];
     }
     [_resetAppleHDAMenuItem setEnabled:true];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [_preferencesWindow close];
 }
 
@@ -70,6 +79,14 @@
 		[[NSBundle mainBundle] addToLoginItems];
     } else {
 		[[NSBundle mainBundle] removeFromLoginItems];
+    }
+}
+
+- (IBAction)toggleHideMenuBarIcon:(id)sender {
+    if ([sender state] == NSOnState) {
+        _statusItem = nil;
+    } else {
+        [self setMenuItem];
     }
 }
 
@@ -117,6 +134,14 @@
     else {
         [self sendNotification:@"Your audio system has been reset successfully."];
     }
+}
+
+- (void)setMenuItem {
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    _statusItem.title = @"";
+    _statusItem.highlightMode = YES;
+    _statusItem.image = [NSImage imageNamed:@"MenuBarIcon"];
+    [_statusItem setMenu:_audioResetMenu];
 }
 
 - (void)sendNotification:(NSString *)message {
