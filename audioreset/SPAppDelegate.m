@@ -11,10 +11,6 @@
 
 @implementation SPAppDelegate
 
-- (void)awakeFromNib {
-    
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     _justLaunched = true;
